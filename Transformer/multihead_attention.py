@@ -30,10 +30,9 @@ class multi_head_attention(nn.Module):
         v = v.view(batch, time, self.n_head, n_d).permute(0, 2, 1, 3)
 
         score = q @ k.transpose(2, 3) / math.sqrt(n_d)
-        mask = torch.tril(torch.ones(time, time, dtype=bool)).to(q.device)
-        # if mask is not None:
-        #     score = score.masked_fill(mask == 0, -10000)
-        score = score.masked_fill(mask, float('-inf'))
+        if mask is not None:
+            # score = score.masked_fill(mask, float('-inf'))
+            score = score.masked_fill(mask == 0, -10000)
         score = self.softmax(score) @ v
 
         score = score.permute(0, 2, 1, 3).contiguous().view(batch, time, self.d_model)        

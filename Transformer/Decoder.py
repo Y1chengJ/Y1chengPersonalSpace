@@ -39,3 +39,18 @@ class DecoderLayer(nn.Module):
         x = self.ffn(x)
         x = self.drop3(x)
         return x
+    
+
+class Decoder(nn.Module):
+    def __init__(self, vocab_size, d_model, max_len, n_layers, n_head, ffn_hidden, drop_prob, device):
+        super(Decoder, self).__init__()
+        self.embedding = TokenEmbedding(vocab_size, d_model)
+        self.layers = nn.ModuleList([DecoderLayer(d_model, n_head, ffn_hidden, drop_prob) for _ in range(n_layers)])
+        self.fc = nn.Linear(d_model, vocab_size)
+
+    def forward(self, x, enc, t_mask, s_mask):
+        x = self.embedding(x)
+        for layer in self.layers:
+            x = layer(x, enc, t_mask, s_mask)
+        x = self.fc(x)
+        return x

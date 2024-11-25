@@ -1,0 +1,3 @@
+/Users/yichengjiang/Documents/Y1chengPersonalSpace/Optimization/Paralle/build/CMakeFiles/MyCppProject.dir
+/Users/yichengjiang/Documents/Y1chengPersonalSpace/Optimization/Paralle/build/CMakeFiles/edit_cache.dir
+/Users/yichengjiang/Documents/Y1chengPersonalSpace/Optimization/Paralle/build/CMakeFiles/rebuild_cache.dir

@@ -5,3 +5,5 @@ This file contains the implementations of optimization methods for neural networ
 1. Distribution
     - accelerate
     - deepspeed
+2. Parallelism
+    - mpi

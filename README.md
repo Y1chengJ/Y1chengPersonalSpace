@@ -1,10 +1,5 @@
 # Jay-s-Personal-Space
 
-
-## Concepts
-    - Concepts
-      - Layer/ Batch Normalization
-
 ## FILE STRUCTURE
 ```
     .

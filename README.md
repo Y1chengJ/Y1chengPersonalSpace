@@ -6,6 +6,7 @@
       - Layer/ Batch Normalization
 
 ## Code Reproduction
+```
     .
 ├── Concepts
 │   ├── LayerBatchNorm.py
@@ -47,9 +48,7 @@
 │   ├── 08-grouped-gemm.py
 │   └── 09-persistent-matmul.py
 └── project.txt
-
-14 directories, 27 files
-
+```
 
 ## Papers
     - Papers

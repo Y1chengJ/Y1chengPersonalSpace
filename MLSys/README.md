@@ -12,8 +12,8 @@
 
 基于源码转换：分析前端代码来将动态图代码自动转写为静态图代码，并在底层自动帮用户使用静态图执行器运行。
 ```python
-torch.jit.script() # 基于源码转换
-torch.jit.trace() # 基于追踪转换    
+torch.jit.script() # 基于源码转换，支持控制流（if-else、for、while）
+torch.jit.trace() # 基于追踪转换，不支持控制流
 ```
 
 ## 计算图算子调度

@@ -5,7 +5,7 @@
     - Concepts
       - Layer/ Batch Normalization
 
-## Code Reproduction
+## FILE STRUCTURE
 ```
     .
 ├── Concepts

@@ -44,6 +44,3 @@
 │   └── 09-persistent-matmul.py
 └── project.txt
 ```
-
-## Papers
-    - Papers
